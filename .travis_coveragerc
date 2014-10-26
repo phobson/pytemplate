@@ -1,0 +1,22 @@
+# .coveragerc to control coverage.py
+[run]
+source = pytemplate
+branch = True
+include = */pytemplate/*.py
+omit = */tests/*
+
+[report]
+include = */pytemplate/*.py
+omit = */tests/*
+ignore_errors = True
+
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+
+    # Don't complain if tests don't hit defensive assertion code:
+    raise NotImplementedError
+    except NotImplementedError
+    # Ignore pass
+    pass
