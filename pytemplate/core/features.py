@@ -33,27 +33,27 @@ class MonitoringStation(object):
 
 
 class DrainageArea(object):
+    '''
+    A simple object representing the drainage area of a BMP. Units are not
+    enforced, so keep them consistent yourself. The calculations available
+    assume that the are of the BMP and the "total" area are mutually
+    exclusive. In other words, the watershed outlet is at the BMP inlet.
+
+    Parameters
+    ----------
+    total_area : optional float (default=1.0)
+        The total geometric area of the BMP's catchment
+    imp_area : optional float (default=1.0)
+        The impervious area of the BMP's catchment
+    bmp_area : optional float (default=0.0)
+        The geometric area of the BMP itself.
+
+    Methods
+    -------
+    simple_method - estimates the influent volume to the BMP based on
+        storm depth.
+    '''
     def __init__(self, total_area=1.0, imp_area=1.0, bmp_area=0.0):
-        '''
-        A simple object representing the drainage area of a BMP. Units are not
-        enforced, so keep them consistent yourself. The calculations available
-        assume that the are of the BMP and the "total" area are mutually
-        exclusive. In other words, the watershed outlet is at the BMP inlet.
-
-        Parameters
-        ----------
-        total_area : optional float (default=1.0)
-            The total geometric area of the BMP's catchment
-        imp_area : optional float (default=1.0)
-            The impervious area of the BMP's catchment
-        bmp_area : optional float (default=0.0)
-            The geometric area of the BMP itself.
-
-        Methods
-        -------
-        simple_method - estimates the influent volume to the BMP based on
-            storm depth.
-        '''
         self.total_area = float(total_area)
         self.imp_area = float(imp_area)
         self.bmp_area = float(bmp_area)
