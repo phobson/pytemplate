@@ -47,5 +47,5 @@ pip install .
 ```
 cd ~
 activate pytemplate
-python -c "import pytemplate; pytemplate.test(verbose=2, coverage=True"
+python -c "import pytemplate; pytemplate.test(verbose=2, coverage=True)"
 ```
