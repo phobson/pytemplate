@@ -53,3 +53,8 @@ Thumbs.db
 *.pyproj
 *.sln
 *.suo
+
+
+# Documentation output #
+########################
+doc/_build
