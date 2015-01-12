@@ -26,8 +26,8 @@ script:
   - cd ~
   - python -c "import pytemplate; pytemplate.test(verbose=2, coverage=True)"
 
-after_success:
-  - coveralls
+#after_success:
+#  - coveralls
 
 #conda create --name pytemplate python=3.3 ipython-notebook matplotlib \
 #                    statsmodels nose pip pyyaml requests coverage \
