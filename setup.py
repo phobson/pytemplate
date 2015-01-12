@@ -25,15 +25,15 @@ setup(
     long_description=LONG_DESCRIPTION,
     download_url="https://github.com/phobson/pytemplate/archive/master.zip",
     license="BSD 3-clause",
-    packages=find_packages(exclude=['cvc']),
+    packages=find_packages(exclude=['files_to_ignore']),
     data_files=[
-        ('pytemplate_data/bmp/data', [
+        ('pytemplate_data/data', [
             d for d in
                 map(lambda x: os.path.join(datadir, x), os.listdir(datadir))
             ]
         ),
     ],
-    platforms="Python 2.7 and 3.3.",
+    platforms="Python 2.7 and 3.4.",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: MIT License",
@@ -44,7 +44,7 @@ setup(
         "Topic :: Scientific/Engineering :: Earth Sciences",
         "Topic :: Software Development :: Libraries :: Python Modules"
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         ],
-    #install_requires=['seaborn', 'coverage']
+    install_requires=['statsmodels', 'nose', 'coverage']
 )
