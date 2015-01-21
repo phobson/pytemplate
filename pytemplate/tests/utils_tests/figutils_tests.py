@@ -2,7 +2,6 @@ import numpy.testing as nptest
 import nose.tools as nt
 
 import matplotlib
-matplotlib.use('agg')
 from matplotlib.testing.decorators import image_comparison, cleanup
 import matplotlib.pyplot as plt
 import pandas
